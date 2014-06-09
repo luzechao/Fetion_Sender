@@ -159,12 +159,16 @@ class FetionGUI:
         except AttributeError:
             showwarning(title="出错了！",message="未指定路径")
     def readPWD(self):
-        self.f = open("UserInfo.txt",'r')
-        self.dename=self.f.readline()
-        self.depwd=self.f.readline()
-        self.eUser.set(base64.decodestring(self.dename))
-        self.ePWD.set(base64.decodestring(self.depwd))
-        self.f.close()
+        try:
+            self.f = open("UserInfo.txt",'r')
+            self.dename=self.f.readline()
+            self.depwd=self.f.readline()
+            self.eUser.set(base64.decodestring(self.dename))
+            self.ePWD.set(base64.decodestring(self.depwd))
+            self.f.close()
+        except IOError:
+            showwarning(title="出错了！",message="未保存密码")
+            
 
     def sent(self):
         

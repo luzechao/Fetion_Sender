@@ -1,7 +1,6 @@
-Fetion_Sender
+﻿Fetion_Sender
 =============
 
-Fetion client with Tkinter python
 这是一个由Tkinter构建GUI的多窗口中国移动飞信发送器
 
 ##特性
@@ -11,7 +10,7 @@ Fetion client with Tkinter python
 4. 自带表情盒
 5. 发送完成后点击[保存日志]，生成日志文档
 
-##新特性预告
+##TODO
 1. 表情功能目前只能复制粘贴使用，需要完善
 2. 常用联系人功能
 
